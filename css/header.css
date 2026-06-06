@@ -1,0 +1,578 @@
+/* =============================================================================
+   01. TOP BAR
+============================================================================= */
+
+.top-bar {
+  background: var(--color-primary);
+  padding: 8px 15px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.top-bar-slider {
+  position: relative;
+  height: 24px;
+}
+
+.top-bar-item {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  color: var(--text-white);
+  font-size: 14px;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+/* Visible State */
+.top-bar-item.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Exit State */
+.top-bar-item.exit {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* =============================================================================
+   02. MAIN HEADER & NAVBAR
+============================================================================= */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 3;
+  box-shadow: var(--shadow-sm);
+}
+
+.main-header.scrolled {
+  background: #fffffff0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  padding: 10px 0;
+  display: block;
+}
+
+.main-logo img {
+  height: 50px;
+}
+
+/* =============================================================================
+   03. DESKTOP DROPDOWN MENU
+============================================================================= */
+
+.nav-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-dropdown-btn:hover {
+  color: var(--text-primary);
+}
+
+.nav-dropdown-wrapper:hover i {
+  transform: rotate(180deg);
+}
+
+/* Prevent icon rotation inside dropdown links */
+.nav-dropdown-menu a i {
+  transform: rotate(0deg) !important;
+}
+
+/* Dropdown Panel */
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: var(--color-white);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  display: none;
+  padding: 6px 0;
+  border-radius: var(--radius-md);
+}
+
+.nav-dropdown-wrapper:hover .nav-dropdown-menu {
+  display: block;
+}
+
+/* Dropdown List */
+.nav-dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-dropdown-menu li {
+  position: relative;
+}
+
+.nav-dropdown-menu li > a {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 16px;
+  text-decoration: none;
+  color: var(--text-normal);
+  font-size: 14px;
+}
+
+.nav-dropdown-menu li:hover > a {
+  background: var(--color-primary-light);
+  color: var(--text-primary);
+}
+
+/* Submenu */
+.nav-dropdown-menu .submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 200px;
+  background: var(--color-white);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: none;
+  border-radius: var(--radius-md);
+}
+
+.nav-dropdown-menu li:hover > .submenu {
+  display: block;
+}
+
+/* =============================================================================
+   04. DESKTOP SEARCH BAR
+============================================================================= */
+
+.header-search input {
+  height: 40px;
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+}
+
+.header-search button {
+  height: 40px;
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+}
+
+/* =============================================================================
+   05. MOBILE SEARCH BOX
+============================================================================= */
+
+.search-box {
+  width: 100%;
+  background: var(--color-white);
+  border-top: 1px solid var(--border);
+}
+
+.search-box input {
+  width: 100%;
+  padding: 24px 14px;
+  border: 0;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  box-shadow: none !important;
+}
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+/* Input with Icon */
+.search-input-wrap {
+  position: relative;
+}
+
+.search-input-wrap i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.search-input-wrap input {
+  padding-left: 40px;
+}
+
+/* =============================================================================
+   06. MOBILE MENU TOGGLE (HAMBURGER ICON)
+============================================================================= */
+
+.menu-icon {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon-wrap {
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+/* Hamburger Lines */
+.menu-icon::before,
+.menu-icon::after,
+.menu-icon span {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: var(--color-black);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu-icon::before {
+  width: 30px;
+  top: 0;
+  left: 0;
+}
+
+.menu-icon::after {
+  width: 20px;
+  top: 8px;
+  left: 0;
+}
+
+.menu-icon span {
+  width: 30px;
+  top: 16px;
+  left: 0;
+}
+
+/* Close Button */
+.close-menu {
+  cursor: pointer;
+}
+
+.close-menu i {
+  font-size: 24px;
+}
+
+/* =============================================================================
+   07. MOBILE MENU WRAPPER & OVERLAY
+============================================================================= */
+
+.mobile-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  height: 100vh;
+  z-index: 10000;
+  background: var(--color-white);
+  transition: left 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.mobile-menu-wrapper.active {
+  left: 0;
+}
+
+/* Background Overlay */
+.wrapper-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.wrapper-bg.active {
+  display: block;
+}
+
+/* Menu Header */
+.mobile-menu-header {
+  padding: 0px 20px 0px 0px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--accent);
+  align-items: center;
+}
+
+/* =============================================================================
+   08. MOBILE SLIDE PANELS
+============================================================================= */
+
+.mobile-slide-container {
+  position: relative;
+  height: calc(100vh - 51px);
+  overflow: hidden;
+}
+
+.mobile-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.mobile-panel.active {
+  left: 0;
+}
+
+/* Back Button */
+.mobile-back {
+  padding: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  cursor: pointer;
+  color: var(--accent);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Menu Item */
+.mobile-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.mobile-item:hover {
+  color: var(--accent);
+}
+
+.mobile-item a {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+/* Section Title */
+.mobile-panel-title {
+  padding: 10px 0 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =============================================================================
+   09. HEADER RIGHT SECTION
+============================================================================= */
+
+.header-right {
+  align-items: center;
+  display: flex;
+  justify-content: end;
+}
+
+/* Icons */
+.header-right i {
+  font-size: 20px;
+  color: var(--text-light);
+}
+
+/* Top Item (Icon + Label) */
+.top-item {
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: 0.3s;
+}
+
+/* =============================================================================
+   10. SEARCH OVERLAY (FULLSCREEN)
+============================================================================= */
+
+/* Search Trigger Button */
+.search-trigger {
+  gap: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Overlay Panel */
+.search-overlay {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #38463df7;
+  z-index: 9999;
+  transition: 0.4s ease;
+}
+
+.search-overlay.active {
+  top: 0;
+  height: 60%;
+}
+
+/* Content Block */
+.search-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.big-text {
+  font-size: 42px;
+  color: var(--text-white);
+}
+
+.small-text {
+  color: var(--text-muted);
+}
+
+.search-content .small-text {
+  color: var(--text-white);
+}
+
+/* Big Input */
+.search-input-big {
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid var(--border);
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  outline: none;
+  background-color: #38463d63;
+  color: var(--text-white);
+  backdrop-filter: blur(3px);
+}
+
+/* Close Button */
+.close-search {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+/* =============================================================================
+   11. ACCOUNT & COUNTRY DROPDOWNS
+============================================================================= */
+
+/* Dropdown Base */
+.custom-dropdown {
+  border-radius: var(--radius-lg);
+  border: none;
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  min-width: 230px;
+}
+
+/* Country Dropdown — Active Item */
+.country-dropdown .dropdown-item.active {
+  background: var(--border-light);
+  color: var(--black);
+  border-radius: var(--radius-md);
+}
+
+/* Tick Icon */
+.check-icon {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+/* Account Dropdown Items */
+.account-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+}
+
+/* Welcome Title */
+.welcome-title {
+  padding: 12px 15px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-welcome);
+  list-style: none;
+}
+
+/* Remove Bootstrap Dropdown Arrow */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* =============================================================================
+   12. CART & WISHLIST
+============================================================================= */
+
+/* Badge */
+.cart-badge,
+.wishlist-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  background: var(--accent);
+  color: var(--text-white);
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cart Dropdown Panel */
+.cart-dropdown {
+  min-width: 260px;
+}
+
+/* Empty Cart Icon */
+.cart-icon-big {
+  font-size: 40px;
+  color: #ddd;
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+   <title>My Account | HCI</title>
+    <meta name="description" content="" >
+    <meta name="keywords" content="" >
+
+    <!-- PNG Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    >
+
+    <!-- Apple iPhone -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    >
+
+    <!-- Android / PWA -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/android-chrome-192x192.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="images/android-chrome-512x512.png"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <!-- ================================
+     ICON LIBRARIES
+================================ -->
+
+    <!-- Google Material Symbols (for icons like wishlist, compare, search) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0"
+    >
+
+    <!-- Font Awesome (for star ratings, extra icons, UI elements) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+  <!-- Base / Global Style -->
+<link rel="stylesheet" href="css/hci-style.css" >
+
+
+<!-- Components / Sections -->
+<link rel="stylesheet" href="css/shop.css" >
+<link rel="stylesheet" href="css/product-ecom.css" > 
+<link rel="stylesheet" href="css/product-detail.css" >
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="css/responsive-style.css" >
+
+   
+  </head>
+
+<body>
+
+
+
+    <!-- ===== MAIN CONTENT ===== -->
+
+    <!-- ══ HERO Banner  ══ -->
+
+    <div
+      class="page-title"
+      style="background: url('images/hero-banner/account-bg.webp');"
+    >
+      <div class="container">
+        <h1>My Account</h1>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent px-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+
+            <li class="breadcrumb-item active" aria-current="page">My Account</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ══ Main  Section ══ -->
+
+
+ <main class="main-container">
+
+<section class="section-container pb-70 ">
+
+<div class="container">
+
+
+<div class="account-wrap">
+  <div class="sidebar">
+    
+    <div class="sidebar-top">
+
+      <div class="avatar-circle">JS</div>
+<div class="avatar-content"> 
+      <h3>Jaipal Shekhawat</h3>
+      <p>jaipal@example.com</p>
+      <div class="member-chip">
+        <i class="material-symbols-outlined">verified</i> Member since 2020
+      </div>
+</div>
+
+    </div>
+    <div class="sidebar-nav">
+      <button class="nav-btn" data-tab="overview">
+        <i class="material-symbols-outlined">person</i> Overview
+      </button>
+      <button class="nav-btn" data-tab="orders">
+        <i class="material-symbols-outlined">inventory_2</i> Orders
+      </button>
+      <button  class="nav-btn active" data-tab="addresses">
+        <i class="material-symbols-outlined">location_on</i> Addresses
+      </button>
+    </div>
+    <div class="logout-area">
+      <a href="login.html" class="logout-btn">
+        <i class="material-symbols-outlined">logout</i> Logout
+      </a>
+    </div>
+  </div>
+
+  <div class="content-area">
+
+    <!-- OVERVIEW TAB -->
+    <div id="tab-overview" class="tab-pane-custom">
+      <div class="section-heading">
+        <i class="material-symbols-outlined">account_circle</i> Account overview
+      </div>
+      <div id="profileDisplay" class="info-card" style="display: none;">
+        <div class="field-row"><span class="field-label">Name</span><span class="field-value" id="nameDisplay">Jaipal Shekhawat</span></div>
+        <div class="field-row"><span class="field-label">Email</span><span class="field-value" id="emailDisplay">jaipal@example.com</span></div>
+        <div class="field-row"><span class="field-label">Phone</span><span class="field-value" id="phoneDisplay">+91 9799979739</span></div>
+        <div class="field-row"><span class="field-label">Member since</span><span class="field-value">January 2020</span></div>
+        <button class="btn btn-outline-primary" id="editProfileBtn"><i class="material-symbols-outlined">edit</i> Edit profile</button>
+      </div>
+      <div id="profileForm" style="display: block; margin-top: 16px;">
+        <div class="info-card">
+          <div class="mb-3"><label class="form-label">Name</label><input class="form-control" id="nameInput" type="text"></div>
+          <div class="mb-3"><label class="form-label">Email</label><input class="form-control" id="emailInput" type="email"></div>
+          <div class="mb-3"><label class="form-label">Phone</label><input class="form-control" id="phoneInput" type="tel"></div>
+          <div class="d-flex gap-2 mt-2">
+            <button class="btn btn-primary" id="saveProfileBtn"><i class="material-symbols-outlined">save</i> Save changes</button>
+            <button class="btn btn-outline-secondary" id="cancelEditBtn"><i class="material-symbols-outlined">close</i> Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDERS TAB -->
+    <div id="tab-orders" class="tab-pane-custom">
+
+      <!-- Orders List -->
+      <div id="orders-list" style="display: block;">
+        <div class="section-heading">
+          <i class="material-symbols-outlined">inventory_2</i> Orders
+        </div>
+        <div class="info-card p-0" style="overflow:hidden">
+          <div class="table-responsive">
+            <table class="orders-table">
+              <thead><tr><th>Order ID</th><th>Date</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong>#1001</strong></td>
+                  <td>Aug 01, 2025</td>
+                  <td>₹3,99,999</td>
+                  <td><span class="badge-delivered">Delivered</span></td>
+                  <td><button class="btn-view" onclick="showOrderDetail('1001','Aug 01, 2025','₹4,999','Delivered')"><i class="material-symbols-outlined">visibility</i> View</button></td>
+                </tr>
+                <tr>
+                  <td><strong>#1002</strong></td>
+                  <td>Aug 05, 2025</td>
+                  <td>₹10,99,999</td>
+                  <td><span class="badge-shipped">Shipped</span></td>
+                  <td><button class="btn-view" onclick="showOrderDetail('1002','Aug 05, 2025','₹1,299','Shipped')"><i class="material-symbols-outlined">visibility</i> View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Detail View -->
+      <div id="order-detail" style="display: none;">
+        <div class="breadcrumb">
+          <a onclick="showOrdersList()">Orders</a>
+          <i class="material-symbols-outlined">chevron_right</i>
+          <span id="detail-breadcrumb">Order #1001</span>
+        </div>
+        <div class="section-heading">
+          <i class="material-symbols-outlined">receipt_long</i> Order Detail
+        </div>
+        <div class="info-card" style="margin-bottom:14px">
+          <div class="order-detail-header">
+            <div>
+              <div class="order-id-text" id="detail-order-id">Order #1001</div>
+              <div class="order-date-text" id="detail-order-date">Placed on Aug 01, 2025</div>
+            </div>
+            <a href="contact-us.html#contactussale" class="contact-btn"><i class="material-symbols-outlined">support_agent</i> Contact us</a>
+          </div>
+          <table class="order-items-table">
+            <thead><tr><th>Product</th><th>Price</th><th>Qty</th><th class="text-right">Total</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><div style="font-weight:500;font-size:13px">Premium Hoodie</div><div style="font-size:11px;color:var(--text-muted)">Olive / Medium</div></td>
+                <td>₹3,500</td><td>1</td><td class="text-right">₹3,500</td>
+              </tr>
+              <tr>
+                <td><div style="font-weight:500;font-size:13px">Winter Socks</div><div style="font-size:11px;color:var(--text-muted)">Pack of 3</div></td>
+                <td>₹499</td><td>3</td><td class="text-right">₹1,497</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="max-width:260px;margin-left:auto;margin-top:14px;padding-top:10px;border-top:1px solid var(--border-light)">
+            <div class="order-summary-row"><span>Subtotal</span><span id="detail-subtotal">₹4,997</span></div>
+            <div class="order-summary-row"><span>Shipping</span><span>₹0</span></div>
+            <div class="order-summary-row total"><span>Total</span><span id="detail-total">₹4,999</span></div>
+          </div>
+        </div>
+        <div class="addr-grid">
+          <div class="addr-card" style="margin-bottom:0">
+            <div class="addr-type"><i class="material-symbols-outlined">receipt_long</i> Billing Address</div>
+            <div class="addr-text">Jaipal Shekhawat<br>123 Market Street<br>Jaipur, RJ 302012<br>India</div>
+          </div>
+          <div class="addr-card" style="margin-bottom:0">
+            <div class="addr-type"><i class="material-symbols-outlined">local_shipping</i> Shipping Address</div>
+            <div class="addr-text">Jaipal Shekhawat<br>45 IT Park, Malviya Nagar<br>Jaipur, RJ 302017<br>India</div>
+          </div>
+        </div>
+        <div class="order-action-row">
+          <button class="btn-download"><i class="material-symbols-outlined">download</i> Download Invoice</button>
+          <button class="btn-track" onclick="showTrackingPage()"><i class="material-symbols-outlined">local_shipping</i> Track Order</button>
+        </div>
+      </div>
+
+      <!-- Order Tracking View -->
+      <div id="order-tracking" style="display: none;">
+        <div class="breadcrumb">
+          <a onclick="showOrdersList()">Orders</a>
+          <i class="material-symbols-outlined">chevron_right</i>
+          <a onclick="showOrderDetail(currentOrder.id,currentOrder.date,currentOrder.amount,currentOrder.status)" id="track-breadcrumb-order">Order #1001</a>
+          <i class="material-symbols-outlined">chevron_right</i>
+          <span>Track</span>
+        </div>
+        <div class="section-heading">
+          <i class="material-symbols-outlined">location_on</i> Order Track
+        </div>
+        <div class="track-card">
+          <div class="track-order-id" id="track-order-id">Track Order #1001</div>
+          <div class="track-date" id="track-order-date">Estimated Delivery: Aug 12, 2025</div>
+          <div class="track-steps">
+            <div class="track-step">
+              <div class="step-circle done"><i class="material-symbols-outlined">check</i></div>
+              <div class="step-line done"></div>
+              <div class="step-label done">Processing</div>
+            </div>
+            <div class="track-step">
+              <div class="step-circle done"><i class="material-symbols-outlined">check</i></div>
+              <div class="step-line done"></div>
+              <div class="step-label done">Shipped</div>
+            </div>
+            <div class="track-step" id="track-step-outfordelivery">
+              <div class="step-circle done"><i class="material-symbols-outlined">check</i></div>
+              <div class="step-line done"></div>
+              <div class="step-label done">Out for Delivery</div>
+            </div>
+            <div class="track-step">
+              <div class="step-circle"><i class="material-symbols-outlined">home</i></div>
+              <div class="step-label">Delivered</div>
+            </div>
+          </div>
+          <div class="track-info-row">
+            <div class="track-info-item">Courier<span>DHL Express</span></div>
+            <div class="track-info-item">Tracking ID<span>DHL-23456799</span></div>
+          </div>
+        </div>
+        <div class="track-action-row">
+          <button class="btn-back" onclick="showOrderDetail(currentOrder.id,currentOrder.date,currentOrder.amount,currentOrder.status)"><i class="material-symbols-outlined">arrow_back</i> Back to Order</button>
+          <button class="btn-invoice"><i class="material-symbols-outlined">download</i> Download Invoice</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ADDRESSES TAB -->
+    <div id="tab-addresses" class="tab-pane-custom active">
+      <div class="section-heading">
+        <i class="material-symbols-outlined">home_pin</i> Addresses
+      </div>
+      <div id="addrDisplay" style="display:block">
+        <div class="addr-card">
+          <div class="addr-type"><i class="material-symbols-outlined">receipt_long</i> Billing address</div>
+          <div class="addr-text" id="billingDisplay">123 Market Street, Jaipur, 302012</div>
+        </div>
+        <div class="addr-card">
+          <div class="addr-type"><i class="material-symbols-outlined">local_shipping</i> Shipping address</div>
+          <div class="addr-text" id="shippingDisplay">45 IT Park, Malviya Nagar, Jaipur</div>
+        </div>
+        <button class="btn btn-outline-primary" id="editAddressesBtn"><i class="material-symbols-outlined">edit</i> Edit addresses</button>
+      </div>
+      <div id="addrForm" style="display:none;margin-top:16px">
+        <div class="info-card">
+          <div class="mb-3"><label class="form-label">Billing address</label><textarea class="form-control" id="billingInput" rows="2"></textarea></div>
+          <div class="mb-3"><label class="form-label">Shipping address</label><textarea class="form-control" id="shippingInput" rows="2"></textarea></div>
+          <div class="d-flex gap-2 mt-2">
+            <button class="btn btn-primary" id="saveAddrBtn"><i class="material-symbols-outlined">save</i> Save addresses</button>
+            <button class="btn btn-outline-secondary" id="cancelAddrBtn"><i class="material-symbols-outlined">close</i> Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+   
+
+
+</main>
+
+</div>
+
+
+
+<!-- Footer -->
+
+
+
+
+
+  <!-- Bootstrap Bundle JS (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- My Account JS -->
+      <script src="js/myaccount.js"></script>
+
+   
+  
+
+
+
+  
+</body>
+
+</html>

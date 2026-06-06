@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Product Detail Ecommerce Slider</title>
+    <meta name="description" content="" >
+    <meta name="keywords" content="" >
+
+    <!-- PNG Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    >
+
+    <!-- Apple iPhone -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    >
+
+    <!-- Android / PWA -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/android-chrome-192x192.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="images/android-chrome-512x512.png"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <!-- Google Material Symbols (for icons like wishlist, compare, search) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0"
+    >
+
+    <!-- Font Awesome (for star ratings, extra icons, UI elements) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+   <!-- Base / Global Style -->
+<link rel="stylesheet" href="css/hci-style.css" >
+
+
+<!-- Components / Sections -->
+<link rel="stylesheet" href="css/shop.css" >
+<link rel="stylesheet" href="css/product-ecom.css" > 
+<link rel="stylesheet" href="css/product-detail.css" >
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="css/responsive-style.css" >
+
+
+  </head>
+
+  <body>
+  
+    <!-- ===== MAIN CONTENT ===== -->
+
+
+    <main class="main-container">
+   <!-- Product  Ecommerce Section -->
+    <section class="section-container pt-md-5">
+    <div class="container">
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent px-0">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+    <li class="breadcrumb-item active" aria-current="page">R-ZENORA</li>
+    </ol>
+    </nav>
+    </div>
+
+    <div class="container">
+    <div class="row">
+
+    <div class="col-md-6">
+    <div class="pos-sticky">
+    <div class="zoom-container page-zoom">
+    <img class="mainImage-page" src="" alt="Product" >
+    <button class="expand-btn page-expand-btn" title="Full screen">
+    <i class="material-symbols-outlined">fullscreen</i>
+    </button>
+    </div>
+
+    <div class="thumb-wrapper">
+    <button class="thumb-arrow page-prev">&#10094;</button>
+    <div class="thumbnails-page"></div>
+    <button class="thumb-arrow page-next">&#10095;</button>
+    </div>
+    </div>
+
+    <!-- PAGE LIGHTBOX -->
+    <div class="lightbox-overlay page-lightbox">
+    <button class="lightbox-close page-lb-close">&#10005;</button>
+    <span class="lightbox-counter page-lb-counter"></span>
+    <div class="lightbox-main">
+    <button class="lb-arrow lb-left page-lb-prev">&#10094;</button>
+    <img
+    class="lightbox-img page-lb-image"
+    src=""
+    alt="Full view"
+    >
+    <button class="lb-arrow lb-right page-lb-next">&#10095;</button>
+    </div>
+    <div class="lb-thumbs page-lb-thumbs"></div>
+    </div>
+    </div>
+    
+
+    <div class="col-md-6 detail-pd">
+    <div class="pos-sticky">
+    <!-- Breadcrumb + Badge -->
+    <div class="prod-breadcrumb">
+    <span class="bread-cat">Massage Chairs</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="prod-title">
+    eGenki Pro 4d Massage Chair
+    </h1>
+
+    <!-- Social Proof -->
+    <div class="prod-social">
+    <span class="fire-badge"
+    >🔥 <strong>2 sold</strong> in last 24 hours</span
+    >
+    </div>
+
+    <!-- Rating -->
+    <div class="product-rating">
+    <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    </div>
+    <span class="rating-count">(4.0)</span>
+    </div>
+
+    <!-- Price -->
+    <div class="prod-price-block">
+    <div class="price-row">
+    <span class="price-label">M.R.P:</span>
+    <span class="price-mrp">₹299,999.00</span>
+    <span class="price-main">₹179,999.00</span>
+    <span class="price-save">You save ₹120,000.00</span>
+    </div>
+
+    <p class="price-tax">Inclusive of all taxes</p>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+    <!-- Color Variant -->
+
+    <div class="variants">
+    <span class="variants-label">Color</span>
+    <div
+    class="color-circle page-circle active"
+    style="background: #808080"
+    onclick="loadSet('col-1', this, 'page')"
+    title="Grey"
+    ></div>
+    <div
+    class="color-circle page-circle"
+    style="background: #e9c4bc"
+    onclick="loadSet('col-2', this, 'page')"
+    title="Pink Brown"
+    ></div>
+    <div
+    class="color-circle page-circle"
+    style="background: #5c4033"
+    onclick="loadSet('col-3', this, 'page')"
+    title="Dark Brown"
+    ></div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+    <h3>Benefits</h3>
+
+
+<div class="benefits-wrap">
+  <div class="benefits-grid">
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">spa</i>
+      </div>
+      <p class="benefit-text">Deep Relaxation</p>
+    </div>
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">monitor_heart</i>
+      </div>
+      <p class="benefit-text">Improved Circulation</p>
+    </div>
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">fitness_center</i>
+      </div>
+      <p class="benefit-text">Muscle Recovery</p>
+    </div>
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">bedtime</i>
+      </div>
+      <p class="benefit-text">Better Sleep</p>
+    </div>
+
+  </div>
+</div>
+
+   <h3>Features</h3>
+
+<div class="benefits-wrap">
+  <div class="benefits-grid">
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">settings_suggest</i>
+      </div>
+      <p class="benefit-text">4D  Massage</p>
+    </div>
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">airline_seat_flat</i>
+      </div>
+      <p class="benefit-text">Zero Gravity </p>
+    </div>
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">compress</i>
+      </div>
+      <p class="benefit-text"> Air Compression</p>
+    </div>
+
+    <div class="benefit-item">
+      <div class="icon-wrap-card">
+        <i class="material-symbols-outlined">timeline</i>
+      </div>
+      <p class="benefit-text">S&L Track </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+    <p>
+ The HCI eGenki Pro 4D Massage Chair combines advanced technology with superior comfort to deliver a
+  deeply relaxing experience. Designed to ease muscle tension, reduce fatigue, and promote recovery, it offers
+   customizable massage options- making it a perfect solution for daily relaxation, stress relief, and complete body rejuvenation.
+    </p>
+
+    <div class="cta-wrap">
+    <!-- ① Stock Urgency Bar -->
+    <div class="stock-bar-wrap">
+    <div class="stock-label">
+    <span class="stock-urgent">
+    <span class="dot"></span>
+    Hurry! Only 12 left in stock
+    </span>
+    <span class="stock-count">Selling fast</span>
+    </div>
+    <div class="stock-track">
+    <div class="stock-fill"></div>
+    </div>
+    </div>
+
+    <!-- ② Add to Cart  + Share -->
+    <div class="btn-row">
+    <!-- Quantity Box -->
+    <div class="qty-box d-flex align-items-center">
+    <button class="qty-btn minus">
+    <i class="material-symbols-outlined">remove</i>
+    </button>
+
+    <input type="text" value="1" class="qty-input" >
+
+    <button class="qty-btn plus">
+    <i class="material-symbols-outlined">add</i>
+    </button>
+    </div>
+
+    <button class="btn-cart">
+    <i class="material-symbols-outlined">shopping_cart</i>
+    Add to Cart
+    </button>
+
+    <button class="btn-icon" title="Share">
+    <i class="material-symbols-outlined">share</i>
+    </button>
+    </div>
+
+    <!-- ③ Buy Now -->
+    <a href="checkout.html" class="btn-buy">
+    <i class="material-symbols-outlined">shopping_bag</i>
+    Buy It Now
+    </a>
+
+    <!-- Live Viewers -->
+    <div class="viewers">
+    <i class="material-symbols-outlined viewer-icon"
+    >visibility</i
+    >
+    <span
+    ><strong>1 customer</strong> is viewing this product right
+    now</span
+    >
+    </div>
+    </div>
+
+    <div class="trust-wrap">
+    <!-- ================= PRODUCT OFFERS ================= -->
+    <div class="product-offer-card">
+    <!-- Offer 1 -->
+    <div class="offer-item">
+    <div class="offer-icon">
+    <i class="material-symbols-outlined">local_offer</i>
+    </div>
+    <div class="offer-content">
+    <h4>10% Coupon Discount</h4>
+    <p>10% Off Coupon Applied at Checkout</p>
+    </div>
+    </div>
+
+    <!-- Offer 2 -->
+    <div class="offer-item">
+    <div class="offer-icon">
+    <i class="material-symbols-outlined">payments</i>
+    </div>
+    <div class="offer-content">
+    <h4>5% Extra Discount on Online Payment</h4>
+    <p>Get additional savings on prepaid orders</p>
+    </div>
+    </div>
+
+    <!-- Offer 3 -->
+    <div class="offer-item">
+    <div class="offer-icon">
+    <i class="material-symbols-outlined">redeem</i>
+    </div>
+    <div class="offer-content">
+    <h4>Free Gift & Priority Shipping</h4>
+    <p>Enjoy rewards & faster delivery on prepaid orders</p>
+    </div>
+    </div>
+
+    <!-- Offer 4 -->
+    <div class="offer-item">
+    <div class="offer-icon">
+    <i class="material-symbols-outlined">credit_card</i>
+    </div>
+    <div class="offer-content">
+    <h4>No Cost EMI Available</h4>
+    <p>Flexible EMI options available at checkout</p>
+    </div>
+    </div>
+    </div>
+
+    <!-- ================= PINCODE CHECKER ================= -->
+    <div class="pincode-box">
+    <div class="pincode-header">
+    <i class="material-symbols-outlined pin-icon"
+    >location_on</i
+    >
+    Check Delivery
+    </div>
+
+    <div class="pincode-row">
+    <input
+    class="pincode-input"
+    type="text"
+    id="pincodeInput"
+    placeholder="Enter pincode & check"
+    maxlength="6"
+    inputmode="numeric"
+    pattern="[0-9]*"
+    >
+    <button class="pincode-btn" onclick="checkPincode()">
+    Check
+    </button>
+    </div>
+
+    <div class="pincode-result" id="pincodeResult">
+    <i class="material-symbols-outlined result-icon"
+    >check_circle</i
+    >
+    <span id="pincodeMsg"></span>
+    </div>
+    </div>
+
+    <!-- ================= OUR PROMISE ================= -->
+
+    <div class="card">
+    <div class="card-header">
+    <i class="material-symbols-outlined">verified_user</i>
+    Our Promise
+    </div>
+
+    <div class="policy-grid">
+
+    <div class="policy-item">
+    <div class="check-circle">
+    <i class="material-symbols-outlined">check_circle</i>
+    </div>
+    <span class="policy-text">100% Authentic Products</span>
+    </div>
+
+    <div class="policy-item">
+    <div class="check-circle">
+    <i class="material-symbols-outlined">workspace_premium</i>
+    </div>
+    <span class="policy-text">3 Yr Warranty + 7 Yr Service</span>
+    </div>
+
+    <div class="policy-item">
+    <div class="check-circle">
+    <i class="material-symbols-outlined">local_shipping</i>
+    </div>
+    <span class="policy-text">Free Pan-India Delivery</span>
+    </div>
+
+    <div class="policy-item">
+    <div class="check-circle">
+    <i class="material-symbols-outlined">chair</i>
+    </div>
+    <span class="policy-text">Free Home Demo</span>
+    </div>
+
+    </div>
+    </div>
+
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <div class="card">
+    <div class="card-header">
+    <i class="material-symbols-outlined">workspace_premium</i>
+    Our Certifications
+    </div>
+
+    <div class="certs-body">
+    <div class="certs-grid">
+    <!-- ISO -->
+    <div class="cert-card">
+    <div class="cert-img">
+    <img
+    src="images/iso-9001-certified.webp.webp"
+    alt="ISO Certification"
+    >
+    </div>
+    <div class="cert-label">ISO 13485:2016</div>
+    </div>
+
+    <!-- RoHS -->
+    <div class="cert-card">
+    <div class="cert-img">
+    <img
+    src="images/rohs-certification.webp"
+    alt="RoHS"
+    >
+    </div>
+    <div class="cert-label">RoHS Certified</div>
+    </div>
+
+    <!-- CE -->
+    <div class="cert-card">
+    <div class="cert-img">
+    <img src="images/ce-certification.webp" alt="CE" >
+    </div>
+    <div class="cert-label">CE Certified</div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- ================= SAFE CHECKOUT ================= -->
+    <div class="card">
+    <div class="checkout-body">
+    <div class="checkout-title">
+    <i class="material-symbols-outlined">verified</i>
+    Guaranteed Safe Checkout
+    </div>
+
+    <div class="payment-logos">
+    <div class="pay-badge">
+    <img src="images/paypal-lg.png" alt="PayPal" >
+    </div>
+
+    <div class="pay-badge">
+    <img src="images/discover-lg.png" alt="Discover" >
+    </div>
+
+    <div class="pay-badge">
+    <img src="images/visa-lg.png" alt="Visa" >
+    </div>
+
+    <div class="pay-badge">
+    <img src="images/mastercard-lg.png" alt="Mastercard" >
+    </div>
+
+    <div class="pay-badge">
+    <img src="images/americanexpress-lg.png" alt="Amex" >
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- ================= WHATSAPP SUPPORT ================= -->
+    <div class="whatsapp-card">
+    <div class="wa-icon-wrap">
+    <i class="fa-brands fa-whatsapp"></i>
+    </div>
+
+    <div class="wa-text">
+    <p class="wa-title">Still Confused What to Buy?</p>
+    <p class="wa-desc">
+    Get expert guidance on choosing the right massage chair
+    for your needs.
+    </p>
+
+    <button
+    class="wa-btn"
+    onclick="
+    window.open('https://wa.me/919799979739', '_blank')
+    "
+    >
+    <i class="fa-brands fa-whatsapp"></i>
+    Talk to an Expert
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    </section>
+</main>
+
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+
+    <!-- Bootstrap Bundle JS (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  
+   
+
+    <!-- Product Ecommerce slider  JS -->
+    <script src="js/ecommerceslider.js"></script>
+
+
+
+  </body>
+</html>

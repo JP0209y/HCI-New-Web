@@ -1,0 +1,1054 @@
+/* =============================================================================
+   01. CUSTOM TABS
+============================================================================= */
+
+.custom-tabs {
+  justify-content: center;
+  gap: 50px;
+}
+
+.custom-tabs .nav-link {
+  border: none !important;
+  background: transparent !important;
+  color: var(--text-muted);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
+}
+
+.custom-tabs .nav-link.active {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.custom-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+.custom-tabs .nav-link:focus {
+  box-shadow: none !important;
+}
+
+.tab-content p {
+  color: var(--text-muted);
+  line-height: 1.9;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* =============================================================================
+   02. PRODUCT SPEC CARD
+============================================================================= */
+
+.product-spec-card {
+  background: var(--color-white);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.product-specs-modern {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+}
+
+.product-specs-modern tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.product-specs-modern tr:last-child {
+  border-bottom: none;
+}
+
+.product-specs-modern th {
+  width: 35%;
+  padding: 18px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: var(--color-beige-light);
+  vertical-align: top;
+}
+
+.product-specs-modern td {
+  padding: 18px 15px;
+  color: var(--text-light);
+  background: var(--color-white);
+  line-height: 1.8;
+}
+
+.product-specs-modern tr:nth-child(even) th {
+  background: var(--color-cream);
+}
+
+.product-specs-modern tr:nth-child(even) td {
+  background: var(--color-cream);
+}
+
+.product-specs-modern ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.product-specs-modern ul li {
+  margin-bottom: 6px;
+}
+
+.product-specs-modern .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* =============================================================================
+   03. NO REVIEW STATE
+============================================================================= */
+
+.no-review-wrapper {
+  background: var(--color-white);
+  padding: 60px 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+
+/* =============================================================================
+   05. FEATURE CARDS (PDP GRID)
+============================================================================= */
+
+/* Intro Block */
+.pdp-intro {
+  text-align: center;
+  /* max-width: 750px; */
+  margin-bottom:40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-label {
+  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  color: var(--text-dark);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+
+/* Card Base */
+.feature-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: block;
+  border: 1.5px solid rgba(210, 160, 140, 0.25);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(200, 130, 100, 0.18);
+}
+
+/* Card Image */
+.feature-card .card-img-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-card .card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.feature-card:hover .card-img-wrap img {
+  transform: scale(1.04);
+}
+
+/* Card Tall Variant */
+.card-tall .card-img-wrap {
+  height: 260px;
+}
+
+/* Card Overlay */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, #3f4f44d9 0%, transparent 100%);
+    padding: 0px 30px 30px 30px;
+  color: var(--text-white);
+}
+
+.card-overlay h5 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  letter-spacing: 0.02em;
+}
+
+.card-overlay p {
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Chevron Button */
+.chevron-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.2rem;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: 0.7rem;
+}
+
+/* Placeholder Backgrounds */
+.bg-modular {
+  background: linear-gradient(135deg, #d8cfc9 0%, #b0a59e 100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-massage {
+  background: linear-gradient(135deg, #c5c8d8 0%, #8090b0 100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-wellness {
+  background: linear-gradient(135deg, #d8d0cc 0%, #a09090 100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-redefine {
+  background: linear-gradient(135deg, #ede8e4 0%, #c8bdb8 100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  opacity: 0.4;
+}
+
+/* Realistic Placeholder Patterns */
+.img-modular {
+  background: repeating-linear-gradient(
+    45deg,
+    #ccc5bf,
+    #ccc5bf 10px,
+    #bdb5af 10px,
+    #bdb5af 20px
+  );
+}
+
+.img-massage {
+  background: radial-gradient(
+    circle at 40% 40%,
+    #a0c0e8 10%,
+    #7090c0 40%,
+    #5070a0 70%
+  );
+}
+
+.img-wellness {
+  background: linear-gradient(160deg, #c8c0bc 30%, #8a8080 100%);
+}
+
+.img-redefine {
+  background: linear-gradient(135deg, #ede9e4 30%, #c8bfba 100%);
+}
+
+/* =============================================================================
+   06. HERO SECTION
+============================================================================= */
+
+.hero-desc-p {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.col1-content {
+ 
+  overflow: hidden;
+}
+
+.col1-content img {
+  width: 100%;
+  height: auto;
+  
+}
+
+.section-content-1 {
+  width: 94%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* =============================================================================
+   07. FABRIC CARD
+============================================================================= */
+
+.fabric-card {
+  position: relative;
+
+  overflow: hidden;
+  aspect-ratio: 4 / 3.2;
+}
+
+.fabric-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fabric-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  color: var(--text-white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* =============================================================================
+   08. FEATURE ITEMS ROW
+============================================================================= */
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Icon Circle */
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon i {
+  font-size: 30px;
+  color: var(--accent);
+}
+
+/* Hover Effect */
+.feature-item:hover .feature-icon {
+  background: var(--accent);
+}
+
+.feature-item:hover .feature-icon i {
+  color: var(--text-white);
+}
+
+/* Text */
+.feature-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* =============================================================================
+   09. TAB NAVIGATION (BOX TABS)
+============================================================================= */
+
+.box-tab {
+  background: var(--color-secondary);
+}
+
+.box-tab .nav-item {
+  flex: 1;
+}
+
+.box-tab .nav-link {
+  border: none;
+  border-radius: 0;
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
+  background: transparent;
+  border-right: 1px solid var(--border-color);
+  transition: all 0.25s ease;
+  height: 100%;
+  width: 100%;
+}
+
+.box-tab .nav-item:last-child .nav-link {
+  border-right: none;
+}
+
+.box-tab .nav-link:hover {
+  background: var(--color-primary);
+  color: var(--text-white);
+}
+
+.box-tab .nav-link.active {
+  background: var(--color-primary);
+  color: var(--text-white);
+}
+
+/* =============================================================================
+   10. TAB CONTENT (BOX TAB CONTENT)
+============================================================================= */
+
+.box-tab-content {
+  background: var(--bg-welcome);
+}
+
+.box-tab-content .tab-pane .tab-inner {
+  display: flex;
+  min-height: 340px;
+}
+
+/* Image Column */
+.tab-img-col {
+  flex: 0 0 55%;
+  max-width: 55%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-img-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Column */
+.tab-text-col {
+  flex: 0 0 45%;
+  max-width: 45%;
+  padding: 52px 48px;
+  background: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tab-text-col h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.tab-text-col .badge-patent {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-xxl);
+  padding: 3px 10px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.tab-text-col p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-light);
+  margin-top: 18px;
+}
+
+/* Fade-Up Animation */
+.box-tab-content .tab-pane {
+  animation: fadeUp 0.35s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .box-tab-content .tab-pane .tab-inner {
+    flex-direction: column;
+  }
+
+  .tab-img-col,
+  .tab-text-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .tab-text-col {
+    padding: 32px 24px;
+  }
+
+  .box-tab .nav-link {
+    font-size: 0.72rem;
+    padding: 14px 6px;
+  }
+}
+
+/* =============================================================================
+   11. UTILITY BACKGROUND CLASSES
+============================================================================= */
+
+.bg-light-cl1 {
+  background-color: var(--color-beige-light);
+}
+.bg-light-cl2 {
+  background-color: var(--color-cream);
+}
+
+/* =============================================================================
+   12. LUXURY MASSAGE SHOWCASE (LMS)
+============================================================================= */
+
+
+.feature-card-slide{
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    border-radius:var(--radius-xxl);
+    overflow:hidden;
+    min-height:540px;
+}
+
+/* IMAGE */
+.feature-image{
+    overflow:hidden;
+}
+
+.feature-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transform:scale(1.08);
+    transition:transform 1s ease;
+}
+
+/* CONTENT */
+.feature-content{
+    background:linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        var(--color-secondary) 100%
+    );
+    color:var(--text-white);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:50px;
+}
+
+.subtitle{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    opacity:.8;
+    margin-bottom:12px;
+    display:inline-block;
+}
+
+.feature-content h3{
+    font-size:1.9rem;
+    margin-bottom:18px;
+    color:var(--text-white);
+}
+
+.feature-content p{
+    font-size:.95rem;
+    line-height:1.8;
+    opacity:.9;
+}
+
+/* NAVIGATION */
+.slider-nav{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.nav-btn-slide{
+    background:transparent;
+    border:1px solid var(--color-white);
+    color:var(--text-white);
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    margin-right:12px;
+    cursor:pointer;
+    transition:.3s ease;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.nav-btn-slide:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* ==========================
+   FADE EFFECT
+========================== */
+
+
+
+
+.feature-slider .carousel-item,
+.feature-slider .carousel-item-next,
+.feature-slider .carousel-item-prev,
+.feature-slider .carousel-item-start,
+.feature-slider .carousel-item-end{
+    transition:none !important;
+}
+
+/* IMAGE ANIMATION */
+.feature-image img{
+    opacity:0;
+    transform:scale(1.08);
+    transition:all .8s ease;
+}
+
+.feature-slider .carousel-item.active .feature-image img{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* SUBTITLE */
+.feature-slider .carousel-item .subtitle{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all .5s ease;
+}
+
+.feature-slider .carousel-item.active .subtitle{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:.1s;
+}
+
+/* HEADING */
+.feature-slider .carousel-item h3{
+    opacity:0;
+    transform:translateY(25px);
+    transition:all .6s ease;
+}
+
+.feature-slider .carousel-item.active h3{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:.3s;
+}
+
+/* PARAGRAPH */
+.feature-slider .carousel-item p{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .7s ease;
+}
+
+.feature-slider .carousel-item.active p{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:.5s;
+}
+
+
+/* MOBILE */
+@media(max-width:767px){
+
+    .feature-content h3{
+        font-size:24px;
+    }
+
+    .feature-card-slide{
+        grid-template-columns:1fr;
+        min-height:auto;
+    }
+
+    .feature-image,
+    .feature-content{
+        width:100%;
+    }
+
+    .feature-content{
+        padding:20px;
+    }
+}
+
+
+
+
+/* =============================================================================
+   13. GIF / VIDEO CARDS
+============================================================================= */
+
+.gif-card {
+  position: relative;
+  height: 380px;
+  border-radius: 15px 15px 65px;
+  overflow: hidden;
+
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 0 0 10px 3px var(--color-primary-light);
+}
+
+/* Glow Ring */
+.gif-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px 15px 65px;
+  box-shadow: 0 0 25px var(--color-primary-light);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.gif-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover Lift */
+.gif-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image */
+.gif-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.gif-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Video */
+.gif-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.gif-card:hover video {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.gif-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  color: var(--text-white);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.gif-content h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.gif-content p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Arrow */
+.gif-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.gif-card:hover .gif-arrow {
+  transform: translateX(6px);
+}
+
+/* =============================================================================
+   14. BRAND / FEATURE TAB BLOCK (FIXED + OPTIMIZED)
+============================================================================= */
+
+/* ================= BRAND TITLE ================= */
+.brand-title {
+  color: var(--text-primary);
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.brand-title span {
+  display: block;
+  font-weight: 800;
+}
+
+/* ================= SUBTITLE ================= */
+.tab-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 400px;
+  min-height: 65px;
+  transition: opacity 0.3s ease;
+}
+
+/* ================= TAB ROW ================= */
+.feature-tabs {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ================= TAB ITEM ================= */
+.feature-tabs .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none !important;
+  background: transparent !important;
+  padding: 0;
+  transition: transform 0.25s ease;
+}
+
+.feature-tabs .nav-link:hover {
+  transform: translateY(-4px);
+}
+
+/* ================= TAB CIRCLE ================= */
+.tab-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
+
+/* ACTIVE CIRCLE */
+.feature-tabs .nav-link.active .tab-circle {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 24px var(--color-primary-light);
+  transform: scale(1.05);
+}
+
+/* ================= ICON ================= */
+.tab-circle i {
+  font-size: 28px;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE ICON */
+.feature-tabs .nav-link.active .tab-circle i {
+  color: var(--text-white);
+}
+
+/* ================= TAB LABEL ================= */
+.tab-label {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 700;
+  max-width: 150px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+/* ACTIVE LABEL */
+.feature-tabs .nav-link.active .tab-label {
+  color: var(--text-primary);
+}
+
+/* ================= TEXT ================= */
+.highlight-text {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.85;
+  max-width: 420px;
+  min-height: 80px;
+  transition: opacity 0.3s ease;
+}
+
+/* ================= IMAGE COLUMN ================= */
+.image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= VIDEO CARD ================= */
+.chair-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+
+  max-width: 520px;
+  width: 100%;
+}
+
+.chair-image-wrapper video,
+.chair-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  display: block;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 2rem;
+  }
+
+  .feature-tabs {
+    gap: 16px;
+  }
+
+  .tab-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tab-circle i {
+    font-size: 24px;
+  }
+
+  .tab-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* =============================================================================
+   15. Product Detail BG Image Contant
+============================================================================= */
+
+.pd-bgimg {
+  position: relative;
+  min-height: 650px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  padding-top: 70px;
+  margin-bottom: 70px;
+}
+
+/* DARK OVERLAY */
+.pd-bgimg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.pd-bgimg .pdp-intro {
+  position: relative;
+  z-index: 1;
+}
+
+.pd-bgimg .pdp-intro p {
+  color: var(--text-dark);
+}
+
+/* Dots */
+#carouselExample .custom-dots.carousel-indicators {
+  bottom: 0px;
+
+  margin-bottom: 1rem;
+}
+
+.youtube-container {
+    max-width: 1140px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.youtube-container img {
+    width: 100%;
+    object-fit: cover;
+}
