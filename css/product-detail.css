@@ -312,14 +312,9 @@
   overflow: hidden;
 }
 
-.col1-content img {
-  width: 100%;
-  height: auto;
-  
-}
+
 
 .section-content-1 {
-  width: 94%;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -467,17 +462,13 @@
   justify-content: center;
 }
 
-.tab-img-col img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 /* Text Column */
 .tab-text-col {
   flex: 0 0 45%;
   max-width: 45%;
-  padding: 52px 48px;
+  padding: 40px 40px;
   background: var(--color-cream);
   display: flex;
   flex-direction: column;
@@ -527,27 +518,7 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .box-tab-content .tab-pane .tab-inner {
-    flex-direction: column;
-  }
 
-  .tab-img-col,
-  .tab-text-col {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .tab-text-col {
-    padding: 32px 24px;
-  }
-
-  .box-tab .nav-link {
-    font-size: 0.72rem;
-    padding: 14px 6px;
-  }
-}
 
 /* =============================================================================
    11. UTILITY BACKGROUND CLASSES
@@ -580,9 +551,7 @@
 }
 
 .feature-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  
     display:block;
     transform:scale(1.08);
     transition:transform 1s ease;
@@ -717,27 +686,6 @@
 }
 
 
-/* MOBILE */
-@media(max-width:767px){
-
-    .feature-content h3{
-        font-size:24px;
-    }
-
-    .feature-card-slide{
-        grid-template-columns:1fr;
-        min-height:auto;
-    }
-
-    .feature-image,
-    .feature-content{
-        width:100%;
-    }
-
-    .feature-content{
-        padding:20px;
-    }
-}
 
 
 
@@ -968,9 +916,7 @@
 
 .chair-image-wrapper video,
 .chair-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  
   border-radius: var(--radius-xl);
   transition:
     opacity 0.4s ease,
@@ -978,29 +924,7 @@
   display: block;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .brand-title {
-    font-size: 2rem;
-  }
 
-  .feature-tabs {
-    gap: 16px;
-  }
-
-  .tab-circle {
-    width: 60px;
-    height: 60px;
-  }
-
-  .tab-circle i {
-    font-size: 24px;
-  }
-
-  .tab-label {
-    font-size: 0.7rem;
-  }
-}
 
 /* =============================================================================
    15. Product Detail BG Image Contant
@@ -1045,10 +969,57 @@
     max-width: 1140px;
     margin: auto;
     overflow: hidden;
+    border-radius: var(--radius-lg);
 }
 
 
 .youtube-container img {
     width: 100%;
     object-fit: cover;
+}
+
+
+/*-----------------*/
+
+.tab-img-col picture {
+    width: 100%;
+}
+
+.color-spec-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+ 
+}
+
+.spec-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 12px 22px;
+  border-radius: 50px;
+
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+
+ 
+  transition: all 0.25s ease;
+}
+
+.spec-btn:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+  transform: translateY(-1px);
 }

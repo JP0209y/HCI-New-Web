@@ -795,3 +795,30 @@
   border-color: #d74f0e;
   color: #d74f0e;
 }
+
+/*-------Sidebar-Filter-------*/
+
+.mobile-filter-btn {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #111;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mobile-filter-btn i {
+  font-size: 15px;
+}
+
+.filter-mobile-head {
+  display: none;
+}
+
+.filter-overlay {
+  display: none;
+}

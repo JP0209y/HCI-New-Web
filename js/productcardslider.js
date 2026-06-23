@@ -2,6 +2,7 @@ let productSwiper = null;
 let categorySwiper = null;
 let videoSwiper = null;
 let locationSwiper = null;
+let cardServiceSwiper = null;
 
 /* ===============================
    PRODUCT SLIDER
@@ -121,8 +122,8 @@ function initLocationSlider() {
 
     breakpoints: {
       576: { slidesPerView: 1.5 },
-      768: { slidesPerView: 3 },
-      992: { slidesPerView: 4 },
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 2 },
       1200: { slidesPerView: 3 },
     },
 
@@ -177,6 +178,49 @@ function initCategorySlider() {
   });
 }
 /* ===============================
+   Card Service SLIDER
+=============================== */
+function initCardServiceSlider() {
+  const el = document.querySelector(".cardservice-swiper");
+  if (!el) return;
+
+  if (cardServiceSwiper) return;
+
+  cardServiceSwiper = new Swiper(el, {
+    slidesPerView: 1.2,
+    spaceBetween: 15,
+    loop: true,
+
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+
+    navigation: {
+      nextEl: ".cardservice-next",
+      prevEl: ".cardservice-prev",
+    },
+
+    speed: 600,
+
+    breakpoints: {
+      576: { slidesPerView: 1.5 },
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 2.5 },
+      1200: { slidesPerView: 3.5 },
+    },
+
+    on: {
+      init() {
+        el.classList.add("swiper-ready");
+      },
+    },
+  });
+}
+
+
+/* ===============================
    INIT ALL
 =============================== */
 window.addEventListener("load", () => {
@@ -185,5 +229,6 @@ window.addEventListener("load", () => {
     initCategorySlider();
     initVideoSlider();
     initLocationSlider();
+    initCardServiceSlider();
   });
 });

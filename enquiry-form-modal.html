@@ -77,7 +77,9 @@
  <!-- Base / Global Style -->
     <link rel="stylesheet" href="css/hci-style.css" >
 
-   
+    <!-- Layout (Header & Footer) -->
+    <link rel="stylesheet" href="css/header.css" >
+    <link rel="stylesheet" href="css/footer.css" >
 
     <!-- Components / Sections -->
     <link rel="stylesheet" href="css/shop.css" >
@@ -125,16 +127,20 @@
           <div class="modal-body p-0">
             <div class="row g-0">
               <!-- Left Side -->
-              <div class="col-lg-6 d-none d-lg-block">
-                <img
-                  src="images/enquiry-bg.webp"
-                  class="w-100 h-100 object-fit-cover d-block"
-                  alt="Rotai Banner"
-                />
+              <div class="col-xl-6 d-none d-xl-block">
+         <img
+    src="images/enquiry-bg.webp"
+    alt="Rotai premium massage chair enquiry banner"
+    width="562"
+    height="582"
+    loading="lazy"
+    fetchpriority="auto"
+    decoding="async"
+    >
               </div>
 
               <!-- Right Side -->
-              <div class="col-lg-6 bg-white p-4">
+              <div class="col-xl-6 bg-white p-4">
                 <h2>Make an Enquiry</h2>
 
                 <p class="text-muted mb-4">
@@ -192,18 +198,21 @@
                   </div>
 
                   <!-- Product -->
+                  
                   <div class="form-group mb-4">
-                    <label for="product" class="form-label"> Product </label>
+  <label for="product" class="form-label">Product</label>
 
-                    <input
-                      type="text"
-                      name="product"
-                      id="product"
-                      class="form-control bg-light"
-                      value="Rotai R-AUREX"
-                      readonly
-                    />
-                  </div>
+  <select name="product" id="product" class="form-select" disabled="" fdprocessedid="kjoybs">
+    <option value="Rotai R-AUREX" selected="">
+      Rotai R-AUREX
+    </option>
+    <option value="Rotai R-ELITE">Rotai R-ELITE</option>
+    <option value="Rotai R-PREMIUM">Rotai R-PREMIUM</option>
+    <option value="Rotai R-LUXURY">Rotai R-LUXURY</option>
+  </select>
+
+
+</div>
 
                   <!-- Submit -->
                   <button type="submit" class="btn btn-primary w-100 ">
@@ -253,6 +262,8 @@
         });</script>
 
 
+<!-- Footer Accordion JS -->
+    <script src="js/footer-accordion.js"></script>
 
 
   </body>
