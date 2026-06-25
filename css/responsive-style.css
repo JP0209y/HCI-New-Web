@@ -32,11 +32,10 @@
    All phones
 =================================== */
 @media (max-width: 767px) {
-  .mobile-detail-accordion {
+
+.mobile-detail-accordion {
     padding: 0 !important;
-
     border-bottom: 1px solid var(--border);
-
     overflow: hidden;
     background: var(--color-white);
   }
@@ -50,12 +49,14 @@
     gap: 14px;
     padding: 17px 18px;
     border: 0;
-    background: #ffffff;
+    background: var(--color-white);
     color: var(--text-primary);
     font-size: 18px;
     font-weight: 800;
     line-height: 1.2;
     text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .mobile-detail-accordion .mobile-accordion-head span {
@@ -73,7 +74,7 @@
     display: inline-block;
   }
 
-  .mobile-detail-accordion .mobile-accordion-head i {
+  .mobile-detail-accordion .mobile-accordion-head .accordion-icon {
     width: 34px;
     height: 34px;
     min-width: 34px;
@@ -84,6 +85,8 @@
     align-items: center;
     justify-content: center;
     font-size: 22px;
+    line-height: 1;
+    transform: none !important;
     transition: all 0.3s ease;
   }
 
@@ -91,10 +94,10 @@
     border-bottom: 1px solid var(--border);
   }
 
-  .mobile-detail-accordion.is-open .mobile-accordion-head i {
-    transform: rotate(180deg);
+  .mobile-detail-accordion.is-open .mobile-accordion-head .accordion-icon {
     background: var(--accent);
     color: var(--color-white);
+    transform: none !important;
   }
 
   .mobile-detail-accordion .mobile-accordion-body {
