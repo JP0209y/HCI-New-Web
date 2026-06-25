@@ -33,6 +33,19 @@
 =================================== */
 @media (max-width: 767px) {
 
+  .tab-arrow {
+    width: 38px;
+    min-width: 38px;
+  }
+
+  .tab-arrow i {
+    font-size: 24px;
+  }
+
+  
+
+
+
 .mobile-detail-accordion {
     padding: 0 !important;
     border-bottom: 1px solid var(--border);
@@ -621,17 +634,7 @@
     margin-top: 0px;
   }
 
-  .box-tab {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-y: auto;
-    justify-content: start;
-  }
 
-  .box-tab .nav-item {
-    flex: 1;
-    white-space: nowrap;
-  }
 
   .tab-text-col {
     padding: 15px;
@@ -947,6 +950,19 @@
    Tablet & Below (Up to 991px)
 =================================== */
 @media (max-width: 991px) {
+
+
+.box-tab .nav-item {
+    flex: 0 0 200px;
+  }
+
+  .box-tab .nav-link {
+   min-height: 52px;
+        padding: 14px 10px;
+  }
+
+
+
   .btn-row .btn-cart {
     font-size: 0;
   }

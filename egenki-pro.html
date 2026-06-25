@@ -1773,47 +1773,55 @@
     </h2>
     </div>
 
-    <ul class="nav nav-tabs box-tab">
+
+    <div class="box-tab-wrapper">
+
+  <button class="tab-arrow tab-arrow-left" type="button" aria-label="Previous tabs">
+    <i class="material-symbols-outlined">chevron_left</i>
+  </button>
+
+  <ul class="nav nav-tabs box-tab tab-scroll" id="featureTabScroll">
     <li class="nav-item">
-    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-zero">
-   S&L Track Massage
-    </button>
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab01" type="button">
+        S&amp;L Track Massage
+      </button>
     </li>
 
     <li class="nav-item">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-footrest">
-    4D Patent Mechanism
-
-    </button>
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab02" type="button">
+        4D Patent Mechanism
+      </button>
     </li>
 
     <li class="nav-item">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-console">
-Body Sensing Technology
-
-    </button>
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab03" type="button">
+        Body Sensing Technology
+      </button>
     </li>
 
     <li class="nav-item">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-ottoman">
-    Patent Vibrating Balls
-
-
-    </button>
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab04" type="button">
+        Patent Vibrating Balls
+      </button>
     </li>
 
     <li class="nav-item">
-    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-cushion">
-  Airbag Massage Technology
-
-    </button>
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab05" type="button">
+        Airbag Massage Technology
+      </button>
     </li>
-    </ul>
+  </ul>
+
+  <button class="tab-arrow tab-arrow-right" type="button" aria-label="Next tabs">
+    <i class="material-symbols-outlined">chevron_right</i>
+  </button>
+
+    </div>
 
     <div class="tab-content box-tab-content">
 
     <!-- 1 -->
-    <div class="tab-pane fade show active" id="tab-zero">
+    <div class="tab-pane fade show active" id="tab01">
     <div class="tab-inner">
     <div class="tab-img-col">
     <picture>
@@ -1854,7 +1862,7 @@ Body Sensing Technology
     </div>
 
     <!-- 2 -->
-    <div class="tab-pane fade" id="tab-footrest">
+    <div class="tab-pane fade" id="tab02">
     <div class="tab-inner">
     <div class="tab-img-col">
     <picture>
@@ -1893,7 +1901,7 @@ Body Sensing Technology
     </div>
 
     <!-- 3 -->
-    <div class="tab-pane fade" id="tab-console">
+    <div class="tab-pane fade" id="tab03">
     <div class="tab-inner">
     <div class="tab-img-col">
     <picture>
@@ -1933,7 +1941,7 @@ Body Sensing Technology
     </div>
 
     <!-- 4 -->
-    <div class="tab-pane fade" id="tab-ottoman">
+    <div class="tab-pane fade" id="tab04">
     <div class="tab-inner">
     <div class="tab-img-col">
    <picture>
@@ -1973,7 +1981,7 @@ Body Sensing Technology
     </div>
 
     <!-- 5 -->
-    <div class="tab-pane fade" id="tab-cushion">
+    <div class="tab-pane fade" id="tab05">
     <div class="tab-inner">
     <div class="tab-img-col">
     <picture>
@@ -2009,6 +2017,7 @@ Body Sensing Technology
     </div>
 
     </div>
+
     </div>
     </div>
 
@@ -4377,6 +4386,11 @@ muscle tension, delivering a perfectly balanced full-body massage experience wit
 
 <!-- Mobile Product Detail Accordion JS -->
     <script src="js/product-detail-accordion.js"></script>
+
+
+    <!-- Mechanism JS  -->
+    <script src="js/mechanism-tabs.js"></script>
+
 
     </body>
     </html>

@@ -401,12 +401,35 @@
    09. TAB NAVIGATION (BOX TABS)
 ============================================================================= */
 
-.box-tab {
+.box-tab-wrapper {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
   background: var(--color-secondary);
 }
 
+/* Tabs scroll area */
+.box-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  background: var(--color-secondary);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.box-tab::-webkit-scrollbar {
+  display: none;
+}
+
 .box-tab .nav-item {
-  flex: 1;
+  flex: 1 0 20%;
 }
 
 .box-tab .nav-link {
@@ -417,27 +440,60 @@
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.04em;
+  line-height: 1.45;
   color: var(--text-white);
   background: transparent;
   border-right: 1px solid var(--border-color);
   transition: all 0.25s ease;
   height: 100%;
+  min-height: 92px;
   width: 100%;
+  white-space: normal;
 }
 
 .box-tab .nav-item:last-child .nav-link {
   border-right: none;
 }
 
-.box-tab .nav-link:hover {
-  background: var(--color-primary);
-  color: var(--text-white);
-}
-
+.box-tab .nav-link:hover,
 .box-tab .nav-link.active {
   background: var(--color-primary);
   color: var(--text-white);
 }
+
+
+/* Left Right Arrow Buttons */
+.tab-arrow {
+  width: 44px;
+  min-width: 44px;
+  border: 0;
+  background: var(--accent);
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.tab-arrow:hover {
+  background: var(--accent);
+  color: var(--text-white);
+}
+
+.tab-arrow i {
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* jab overflow na ho to JS se hide hoga */
+.tab-arrow.is-hidden {
+  display: none;
+}
+
+
+
 
 /* =============================================================================
    10. TAB CONTENT (BOX TAB CONTENT)
