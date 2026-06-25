@@ -826,7 +826,7 @@
     <main class="main-container">
 
     <!-- Product  Ecommerce Section -->
-    <section class="section-container pt-md-5">
+    <section class="section-container pt-md-5 product-ecommerce-section" id="productEcomSection">
     <div class="container">
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent px-0">
@@ -1563,12 +1563,12 @@
     </div>
     </div>
 
-    <div class="col-xl-8 mx-auto">
+    <div class="col-xl-8 mx-auto mb-3 mb-md-0">
     <!-- Grid -->
     <div class="row g-3">   
 
-    <!-- Multi-functional -->
-    <div class="col-12 col-md-6">
+    <!-- Mechanism -->
+    <div class="col-6 col-md-6">
     <a href="#detailsection01" class="feature-card">
     <div class="card-img-wrap card-tall">
     <img src="images/eGENKI-PRO/detail/egenki-pro-vid01.gif" alt="">
@@ -1581,8 +1581,8 @@
     </a>
     </div>
 
-    <!-- Massage Tech -->
-    <div class="col-12 col-md-6">
+    <!-- Features  -->
+    <div class="col-6 col-md-6">
     <a href="#detailsection02" class="feature-card">
     <div class="card-img-wrap card-tall">
     <img src="images/eGENKI-PRO/detail/egenki-pro-vid02.gif" alt="">
@@ -1595,22 +1595,22 @@
     </a>
     </div>
 
-    <!-- Wellness -->
-    <div class="col-12 col-md-4">
+    <!-- Programs -->
+    <div class="col-6 col-md-4">
     <a href="#detailsection03" class="feature-card">
     <div class="card-img-wrap">
     <img src="images/eGENKI-PRO/detail/egenki-pro-vid03.gif" alt="">
     </div>
     <div class="card-overlay">
-    <h5>Program / Function</h5>
+    <h5>Programs</h5>
     <p> Smart auto programs with customizable massage control.</p>
     <div class="chevron-btn"><i class="material-symbols-outlined">expand_more</i></div>
     </div>
     </a>
     </div>
 
-    <!-- Experience -->
-    <div class="col-12 col-md-8">
+    <!-- Benefits -->
+    <div class="col-6 col-md-8">
     <a href="#detailsection04" class="feature-card">
     <div class="card-img-wrap">
     <img src="images/eGENKI-PRO/detail/egenki-pro-vid04.gif" alt="">
@@ -1626,13 +1626,14 @@
     </div>
 
     </div>
+
     </div>
     </section>
 
 
-    <!-- Product Content Card Under Graphic Contetn Section 01-->
+    <!-- Mechanism Contetn Section 01-->
 
-    <section class="section-container" id="detailsection01">
+    <section class="section-container mobile-detail-accordion" id="detailsection01"  data-accordion-title="Mechanism">
 
     <div class="container pb-70">
     <div class="section-content-1">
@@ -2015,9 +2016,9 @@ Body Sensing Technology
 
     </section>
 
-    <!--  Product Content Card Under Graphic Contetnt Section 02   -->
+    <!--  Features  Contetnt Section 02   -->
 
-    <section class="section-container bg-light-cl1" id="detailsection02">
+    <section class="section-container bg-light-cl1 mobile-detail-accordion" id="detailsection02" data-accordion-title="Features">
     <div class="container pb-70">
     <!-- Heading -->
     <div class="section-content-1">
@@ -2406,14 +2407,15 @@ Body Sensing Technology
 
     </section>
 
-    <!-- Product Content Card Under Graphic Contetnt Section 03 -->
-    <section class="section-container bg-light-cl2" id="detailsection03">
+    <!-- Programs Contetnt Section 03 -->
+
+    <section class="section-container bg-light-cl2 mobile-detail-accordion" id="detailsection03" data-accordion-title="Programs">
     <div class="container pb-70">
     <!-- Heading -->
     <div class="section-content-1">
     <div class="pdp-intro text-center">
     <p class="section-label mb-1">
-    Program / Function
+   Programs
     </p>
     <h2 class="h2-section-title"> Smart Auto Programs for Effortless Relaxation  </h2>
     <p class="hero-desc-p mx-auto">
@@ -2428,7 +2430,7 @@ muscle tension, delivering a perfectly balanced full-body massage experience wit
     <!-- Card 1 -->
     <div class="col-md-4">
     <div class="gif-card">
-    <img src="images/eGENKI-PRO/detail/program01.gif" alt="Program / Function">
+    <img src="images/eGENKI-PRO/detail/program01.gif" alt="Programs">
     </div>
     </div>
 
@@ -2437,7 +2439,7 @@ muscle tension, delivering a perfectly balanced full-body massage experience wit
     <div class="gif-card">
     <img
     src="images/eGENKI-PRO/detail/program02.gif"
-    alt="Program / Function"
+    alt="Programs"
     >
     </div>
     </div>
@@ -2447,7 +2449,7 @@ muscle tension, delivering a perfectly balanced full-body massage experience wit
     <div class="gif-card">
     <img
     src="images/eGENKI-PRO/detail/program03.gif"
-    alt="Program / Function"
+    alt="Programs"
     >
     </div>
     </div>
@@ -2681,8 +2683,9 @@ muscle tension, delivering a perfectly balanced full-body massage experience wit
 
     </section>
 
-    <!-- Product Content Card Under Graphic Contetnt Section 04 -->
-    <section class="section-container pt-0" id="detailsection04">
+    <!-- Benefits Contetnt Section 04 -->
+
+    <section class="section-container pt-0 mobile-detail-accordion" id="detailsection04" data-accordion-title="Benefits">
 
 
   <div
@@ -4266,6 +4269,20 @@ muscle tension, delivering a perfectly balanced full-body massage experience wit
     </div>
 
 
+    <!-- Mobile Sticky Bottom CTA -->
+<div class="mobile-sticky-cta" id="mobileStickyCta">
+  <button class="mobile-sticky-btn btn-cart">
+    <i class="material-symbols-outlined">shopping_cart</i>
+    Add to Cart
+  </button>
+
+  <a href="checkout.html" class="mobile-sticky-btn btn-buy">
+    <i class="material-symbols-outlined">shopping_bag</i>
+    Buy Now
+  </a>
+</div>
+
+
     <!-- ===== JAVASCRIPT ===== -->
 
     <!-- Bootstrap Bundle JS (Includes Popper) -->
@@ -4354,7 +4371,13 @@ muscle tension, delivering a perfectly balanced full-body massage experience wit
     <!-- Footer Accordion JS -->
     <script src="js/footer-accordion.js"></script>
 
+  <!-- Mobile Sticky CTA JS -->
 
+    <script src="js/mobile-sticky-cta.js"></script>
+
+<!-- Mobile Product Detail Accordion JS -->
+    <script src="js/product-detail-accordion.js"></script>
 
     </body>
     </html>
+

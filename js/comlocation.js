@@ -49,20 +49,19 @@ const hciStores = {
 };
 
 const cityImages = {
-  Jaipur:       "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/jaipur.png",
-  Udaipur:      "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/udaipur.png",
-  Surat:        "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/Ahmedabad.png",
-  Delhi:        "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/Delhi.png",
-  Chhattisgarh: "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/Kolkata.png",
-  Lucknow:      "https://www.woodenstreet.com/images/store/chennai.svg",
-  Hyderabad:    "https://www.woodenstreet.com/images/store/Hyderabad.svg",
-  Nashik:       "https://www.woodenstreet.com/images/store/pune.svg",
-  Chandigarh:   "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/Gurugram.png",
-  Dehradun:     "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/Delhi.png",
-  Mumbai:       "https://www.woodenstreet.com/images/store/mumbai.svg",
-  Noida:        "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/Noida.png",
-  Bengaluru:    "https://www.woodenstreet.com/images/store/Bengaluru.svg",
-  Indore:       "https://images.woodenstreet.de/wsnew2024/static-webmedia/images/store/Ahmedabad.png",
+  Jaipur:       "images/jaipur-ic.png",
+  Surat:        "images/surat-ic.png",
+  Delhi:        "images/delhi-ic.png",
+  Chhattisgarh: "images/chhattisgarh-ic.png",
+  Lucknow:      "images/lucknow-ic.png",
+  Hyderabad:    "images/hyderabad-ic.png",
+  Nashik:       "images/nashik-ic.png",
+  Chandigarh:   "images/chandigarh-ic.png",
+  Dehradun:     "images/dehradun-ic.png",
+  Mumbai:       "images/mumbai-ic.png",
+  Noida:        "images/noida-ic.png",
+  Bengaluru:    "images/bengaluru-ic.png",
+  Indore:       "images/indore-ic.png",
 };
 
 const cities = Object.keys(hciStores);

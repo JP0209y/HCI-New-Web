@@ -32,22 +32,181 @@
    All phones
 =================================== */
 @media (max-width: 767px) {
+  .mobile-detail-accordion {
+    padding: 0 !important;
 
-  .expert-help-card {
-       
-        border: 0;
-        padding: 0;
+    border-bottom: 1px solid var(--border);
+
+    overflow: hidden;
+    background: var(--color-white);
+  }
+
+  .mobile-detail-accordion .mobile-accordion-head {
+    width: 100%;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 17px 18px;
+    border: 0;
+    background: #ffffff;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .mobile-detail-accordion .mobile-accordion-head span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-detail-accordion .mobile-accordion-head span::before {
+    content: "";
+    width: 6px;
+    height: 28px;
+    border-radius: var(--radius-xxl);
+    background: var(--accent);
+    display: inline-block;
+  }
+
+  .mobile-detail-accordion .mobile-accordion-head i {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: var(--radius-circle);
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-detail-accordion.is-open .mobile-accordion-head {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-detail-accordion.is-open .mobile-accordion-head i {
+    transform: rotate(180deg);
+    background: var(--accent);
+    color: var(--color-white);
+  }
+
+  .mobile-detail-accordion .mobile-accordion-body {
+    display: none;
+    padding: 16px 12px 22px;
+    background: var(--color-white);
+  }
+
+  .mobile-detail-accordion.is-open .mobile-accordion-body {
+    display: block;
+    animation: accordionFade 0.28s ease;
+  }
+
+  .mobile-detail-accordion .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mobile-detail-accordion .pb-70 {
+    padding-bottom: 28px;
+  }
+
+  .mobile-detail-accordion .pdp-intro {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .mobile-detail-accordion .section-label {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .mobile-detail-accordion .h2-section-title {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+
+  .mobile-detail-accordion .hero-desc-p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-light);
+  }
+
+  @keyframes accordionFade {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
     }
 
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-  
+  .custom-tabs .nav-link.active::after {
+    display: none;
+  }
 
+  .mobile-sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: #ffffff;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.14);
+    transform: translateY(110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-sticky-cta.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-sticky-btn {
+    width: 50%;
+    min-height: 48px;
+
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  body.has-mobile-sticky-cta {
+    padding-bottom: 78px;
+  }
+
+  .expert-help-card {
+    border: 0;
+    padding: 0;
+  }
 
   .expert-help-card .expert-help-icon,
   .expert-help-card .expert-help-title,
   .expert-help-card .expert-help-desc,
-  .detail-pd .cert-label {display: none;}
-
+  .detail-pd .cert-label {
+    display: none;
+  }
 
   .lightbox-main {
     padding: 60px 16px 20px;
@@ -264,12 +423,25 @@
     min-width: 90px;
   }
 
-  .card-overlay {
-    padding: 0px 15px 40px 15px;
-  }
+     .card-overlay {
+        padding: 12px 11px 12px 12px;
+        background: #00000047;
+    }
+
+    .card-overlay h5 {
+    font-size: 16px;
+  
+}
+
+
+.chevron-btn {
+        bottom: 8px;
+        right: 12px;
+    }
 
   .card-overlay p {
     font-size: 14px;
+    display: none;
   }
 
   .custom-tabs {
@@ -277,7 +449,7 @@
   }
 
   .custom-tabs .nav-link {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .detail-pd h3 {
@@ -296,8 +468,6 @@
   .wa-btn {
     font-size: 12px;
   }
-
-
 
   .orders-table td {
     white-space: nowrap;
@@ -774,26 +944,23 @@
    Tablet & Below (Up to 991px)
 =================================== */
 @media (max-width: 991px) {
-
-
-    .btn-row .btn-cart {
+  .btn-row .btn-cart {
     font-size: 0;
   }
 
-.expert-help-card button, .expert-help-card a {
-        font-size: 0px;
-        padding: 0;
-        gap: 0;
-        width: 40px;
-        height: 40px;
-    }
+  .expert-help-card button,
+  .expert-help-card a {
+    font-size: 0px;
+    padding: 0;
+    gap: 0;
+    width: 40px;
+    height: 40px;
+  }
 
-.expert-help-card button i, .expert-help-card a i {
+  .expert-help-card button i,
+  .expert-help-card a i {
     font-size: 24px;
-}
-
-
-
+  }
 
   .shop-toolbar {
     border-bottom: 1px solid #d8d8d8;
@@ -939,6 +1106,14 @@
    Tablet & Above (768px and up)
 =================================== */
 @media (min-width: 768px) {
+  .mobile-detail-accordion .mobile-accordion-head {
+    display: none;
+  }
+
+  .mobile-sticky-cta {
+    display: none;
+  }
+
   .trust-col {
     flex: 0 0 20%;
     max-width: 20%;
