@@ -14,7 +14,7 @@ function initProductSlider() {
   if (!el) return;
 
   productSwiper = new Swiper(".product-swiper", {
-    slidesPerView: 1.2,
+    slidesPerView: 1,
     spaceBetween: 15,
     loop: true,
 
@@ -60,7 +60,7 @@ function initVideoSlider() {
   if (!el) return;
 
   videoSwiper = new Swiper(".video-swiper", {
-    slidesPerView: 1.2,
+    slidesPerView: 1,
     spaceBetween: 15,
     loop: true,
 
@@ -103,8 +103,8 @@ function initLocationSlider() {
   if (!el) return;
 
   locationSwiper = new Swiper(".location-swiper", {
-    slidesPerView: 1.2,
-    spaceBetween: 24,
+    slidesPerView: 1,
+    spaceBetween: 15,
     loop: true,
 
     autoplay: {
@@ -121,7 +121,7 @@ function initLocationSlider() {
     speed: 600,
 
     breakpoints: {
-      576: { slidesPerView: 1.5 },
+      576: { slidesPerView: 1 },
       768: { slidesPerView: 2 },
       992: { slidesPerView: 2 },
       1200: { slidesPerView: 3 },
@@ -187,7 +187,7 @@ function initCardServiceSlider() {
   if (cardServiceSwiper) return;
 
   cardServiceSwiper = new Swiper(el, {
-    slidesPerView: 1.2,
+    slidesPerView: 1,
     spaceBetween: 15,
     loop: true,
 

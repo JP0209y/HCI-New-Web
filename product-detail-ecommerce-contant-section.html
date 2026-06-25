@@ -92,8 +92,10 @@
 
     <!-- ===== MAIN CONTENT ===== -->
 <main class="main-container">
+
    <!-- Product  Ecommerce Section -->
-    <section class="section-container pt-md-5">
+    <section class="section-container pt-md-5 product-ecommerce-section" id="productEcomSection">
+      
     <div class="container">
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent px-0">
@@ -106,7 +108,6 @@
 
     <div class="container">
     <div class="row">
-
     <div class="col-md-6">
     <div class="pos-sticky">
     <div class="zoom-container page-zoom">
@@ -139,7 +140,6 @@
     <div class="lb-thumbs page-lb-thumbs"></div>
     </div>
     </div>
-    
 
     <div class="col-md-6 detail-pd">
     <div class="pos-sticky">
@@ -159,6 +159,8 @@
     >🔥 <strong>2 sold</strong> in last 24 hours</span
     >
     </div>
+
+
 
     <!-- Rating -->
     <div class="product-rating">
@@ -184,7 +186,19 @@
     <p class="price-tax">Inclusive of all taxes</p>
     </div>
 
-    <div class="d-flex align-items-center gap-3">
+<details class="product-details-box mb-3">
+  <summary>More Details</summary>
+
+  <p>
+    The HCI eGenki Pro 4D Massage Chair combines advanced technology with superior comfort 
+    to deliver a deeply relaxing experience. Designed to ease muscle tension, reduce fatigue, and
+    promote recovery, it offers customizable massage options- making it a perfect solution for daily relaxation, stress relief, and complete body rejuvenation.
+  </p>
+</details>
+
+
+    <div class="color-spec-row">
+
     <!-- Color Variant -->
 
     <div class="variants">
@@ -209,96 +223,14 @@
     ></div>
     </div>
 
+    <a href="#productspecification" class="spec-btn">
+     Specification
+    <i class="material-symbols-outlined">keyboard_arrow_down</i>
+  </a>
+
     </div>
 
-
-
-
-
-
-    <h3>Benefits</h3>
-
-
-<div class="benefits-wrap">
-  <div class="benefits-grid">
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">spa</i>
-      </div>
-      <p class="benefit-text">Deep Relaxation</p>
-    </div>
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">monitor_heart</i>
-      </div>
-      <p class="benefit-text">Improved Circulation</p>
-    </div>
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">fitness_center</i>
-      </div>
-      <p class="benefit-text">Muscle Recovery</p>
-    </div>
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">bedtime</i>
-      </div>
-      <p class="benefit-text">Better Sleep</p>
-    </div>
-
-  </div>
-</div>
-
-   <h3>Features</h3>
-
-<div class="benefits-wrap">
-  <div class="benefits-grid">
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">settings_suggest</i>
-      </div>
-      <p class="benefit-text">4D  Massage</p>
-    </div>
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">airline_seat_flat</i>
-      </div>
-      <p class="benefit-text">Zero Gravity </p>
-    </div>
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">compress</i>
-      </div>
-      <p class="benefit-text"> Air Compression</p>
-    </div>
-
-    <div class="benefit-item">
-      <div class="icon-wrap-card">
-        <i class="material-symbols-outlined">timeline</i>
-      </div>
-      <p class="benefit-text">S&L Track </p>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-    <p>
- The HCI eGenki Pro 4D Massage Chair combines advanced technology with superior comfort to deliver a
-  deeply relaxing experience. Designed to ease muscle tension, reduce fatigue, and promote recovery, it offers
-   customizable massage options- making it a perfect solution for daily relaxation, stress relief, and complete body rejuvenation.
-    </p>
-
-    <div class="cta-wrap">
+ <div class="cta-wrap">
     <!-- ① Stock Urgency Bar -->
     <div class="stock-bar-wrap">
     <div class="stock-label">
@@ -344,6 +276,86 @@
     Buy It Now
     </a>
 
+
+<div class="row g-2">
+
+  <!-- Download Brochure -->
+  <div class="col-7 col-md-12 col-lg-6">
+    <a href="brochure.pdf" class="btn btn-dark w-100" download>
+      <i class="material-symbols-outlined">download</i> Download Brochure
+      
+    </a>
+  </div>
+
+  <!-- Compare Button -->
+  <div class="col-5 col-md-12 col-lg-6">
+    <button 
+      class="btn btn-secondary w-100"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#compareSection"
+      aria-expanded="false"
+      aria-controls="compareSection">
+
+     <i class="material-symbols-outlined">compare_arrows</i>
+
+      Compare
+     
+    </button>
+  </div>
+
+  <!-- Compare Dropdown Section -->
+  <div class="col-12">
+    <div class="collapse mt-3" id="compareSection">
+     <!-- Compare Card -->
+<div class="card">
+
+  <div class="card-header d-flex align-items-center justify-content-between">
+    <span>Compare with:</span>
+
+    <!-- Open Compare Button -->
+   <button class="btn btn-comparison">
+ 
+  Compare Products
+</button>
+
+  </div>
+
+  <div class="certs-body">
+    <select id="compare-dropdown" class="form-select">
+      <option value="">Select Product</option>
+      <option value="39489">HCI eZen Advanced 3D Electric Massage Chair</option>
+      <option value="33580">HCI eRelaxic Lite Sonic Wave Full Body Massage Chair</option>
+      <option value="33306">Fujiiryoki MR-8000 Cyber Relax Pro Massage Chair</option>
+      <option value="33299">Fujiiryoki MR-6000 Calm Plus Massage Recliner</option>
+      <option value="33294">Fujiiryoki JP-4000 Cyber Relax</option>
+      <option value="27253">HCI Polyester Massage Chair Cover</option>
+      <option value="23529">HCI eComfy Pro Massage Sofa</option>
+      <option value="23426">HCI eGenki Pro 4D Massage Chair</option>
+      <option value="23245">Product Booking</option>
+      <option value="21682">HCI eRelaxic Advanced Electric Massage Chair</option>
+      <option value="21626">Fujiiryoki JP 3000 Premium Massage Chair</option>
+      <option value="19092">HCI Massage Chair Booking</option>
+      <option value="18980">HCI eRelaxic Neo Massage Chair</option>
+      <option value="18928">HCI eMedico Pro 3D Massage Chair</option>
+      <option value="17988">HCI eRelaxic New Massage Recliner</option>
+      <option value="17779">HCI eRelaxic Refurbished Massage Chair</option>
+      <option value="15783">HCI The Founder Office Massage Chair</option>
+      <option value="15665">HCI eGenki Massage Chair</option>
+    </select>
+  </div>
+
+</div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
     <!-- Live Viewers -->
     <div class="viewers">
     <i class="material-symbols-outlined viewer-icon"
@@ -355,6 +367,82 @@
     >
     </div>
     </div>
+<h3>Benefits</h3>
+
+  <div class="benefits-wrap">
+    <div class="benefits-grid">
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">spa</i>
+        </div>
+        <p class="benefit-text">Deep Relaxation</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">monitor_heart</i>
+        </div>
+        <p class="benefit-text">Improved Circulation</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">fitness_center</i>
+        </div>
+        <p class="benefit-text">Muscle Recovery</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">bedtime</i>
+        </div>
+        <p class="benefit-text">Better Sleep</p>
+      </div>
+
+    </div>
+  </div>
+
+ <h3>Features</h3>
+
+  <div class="benefits-wrap">
+    <div class="benefits-grid">
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">settings_suggest</i>
+        </div>
+        <p class="benefit-text">4D Massage</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">airline_seat_flat</i>
+        </div>
+        <p class="benefit-text">Zero Gravity</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">compress</i>
+        </div>
+        <p class="benefit-text">Air Compression</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="icon-wrap-card">
+          <i class="material-symbols-outlined">timeline</i>
+        </div>
+        <p class="benefit-text">S&L Track</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+   
 
     <div class="trust-wrap">
     <!-- ================= PRODUCT OFFERS ================= -->
@@ -552,30 +640,31 @@
     </div>
     </div>
 
-    <!-- ================= WHATSAPP SUPPORT ================= -->
-    <div class="whatsapp-card">
-    <div class="wa-icon-wrap">
-    <i class="fa-brands fa-whatsapp"></i>
+    <!-- =================  SUPPORT CARD ================= -->
+   
+    <div class="expert-help-card">
+  <div class="expert-help-icon">
+    <i class="fa-solid fa-headset"></i>
+  </div>
+  <div class="expert-help-content">
+    <h4 class="expert-help-title">Still Confused What to Buy?</h4>
+    <p class="expert-help-desc">Get expert guidance in choosing the perfect massage chair for your home, office, or wellness needs.</p>
+    <div class="expert-help-actions">
+      <button class="expert-btn expert-btn-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+        <i class="fa-regular fa-envelope"></i> Enquire Now
+      </button>
+      <a href="tel:+919799979739" class="expert-btn expert-btn-call">
+        <i class="fa-solid fa-phone"></i> Call Now
+      </a>
+      <a href="https://wa.me/919799979739" target="_blank" class="expert-btn expert-btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
     </div>
+  </div>
+</div>
 
-    <div class="wa-text">
-    <p class="wa-title">Still Confused What to Buy?</p>
-    <p class="wa-desc">
-    Get expert guidance on choosing the right massage chair
-    for your needs.
-    </p>
 
-    <button
-    class="wa-btn"
-    onclick="
-    window.open('https://wa.me/919799979739', '_blank')
-    "
-    >
-    <i class="fa-brands fa-whatsapp"></i>
-    Talk to an Expert
-    </button>
-    </div>
-    </div>
+
     </div>
     </div>
     </div>
@@ -583,6 +672,7 @@
     </div>
     
     </section>
+
 </main>
     <!-- ===== JAVASCRIPT ===== -->
 

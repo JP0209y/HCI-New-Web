@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!accordionSections.length) return;
 
-  accordionSections.forEach(function (section, index) {
+  accordionSections.forEach(function (section) {
     // Duplicate accordion create hone se rokta hai
     if (section.querySelector(".mobile-accordion-head")) return;
 
@@ -24,25 +24,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.createElement("button");
     button.className = "mobile-accordion-head";
     button.type = "button";
-    button.setAttribute("aria-expanded", index === 0 ? "true" : "false");
+    button.setAttribute("aria-expanded", "false");
 
     button.innerHTML = `
       <span>${title}</span>
-      <i class="material-symbols-outlined accordion-icon">
-        ${index === 0 ? "keyboard_arrow_up" : "keyboard_arrow_down"}
-      </i>
+      <i class="material-symbols-outlined accordion-icon">keyboard_arrow_down</i>
     `;
 
     section.appendChild(button);
     section.appendChild(body);
 
-    // First accordion open rahega
-    if (index === 0) {
-      section.classList.add("is-open");
-    }
+    // Default sabhi accordion close rahenge
+    section.classList.remove("is-open");
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
       const isOpen = section.classList.contains("is-open");
+
+      // Current clicked section ki position save karo
+      const sectionTopBefore = section.getBoundingClientRect().top + window.pageYOffset;
 
       // Sab accordion close karo
       accordionSections.forEach(function (item) {
@@ -70,6 +71,17 @@ document.addEventListener("DOMContentLoaded", function () {
           icon.textContent = "keyboard_arrow_up";
         }
       }
+
+      // Page jump rokne ke liye clicked section ko same position par rakho
+      requestAnimationFrame(function () {
+        const sectionTopAfter = section.getBoundingClientRect().top + window.pageYOffset;
+        const scrollDiff = sectionTopAfter - sectionTopBefore;
+
+        window.scrollTo({
+          top: window.pageYOffset + scrollDiff,
+          behavior: "auto",
+        });
+      });
     });
   });
 });

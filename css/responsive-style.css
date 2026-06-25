@@ -32,7 +32,6 @@
    All phones
 =================================== */
 @media (max-width: 767px) {
-
   .tab-arrow {
     width: 38px;
     min-width: 38px;
@@ -42,11 +41,7 @@
     font-size: 24px;
   }
 
-  
-
-
-
-.mobile-detail-accordion {
+  .mobile-detail-accordion {
     padding: 0 !important;
     border-bottom: 1px solid var(--border);
     overflow: hidden;
@@ -330,18 +325,6 @@
     text-align: center;
   }
 
-  .usecases-grid {
-    gap: 10px;
-    display: flex;
-    overflow-y: auto;
-  }
-
-  .usecase-card {
-    width: 300px;
-    min-width: 80%;
-    margin: 8px;
-  }
-
   .expert-help-title {
     font-size: 14px;
   }
@@ -416,7 +399,7 @@
 
   .offer-full-banner {
     height: auto;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .brand-row {
@@ -439,21 +422,19 @@
     min-width: 90px;
   }
 
-     .card-overlay {
-        padding: 12px 11px 12px 12px;
-        background: #00000047;
-    }
+  .card-overlay {
+    padding: 12px 11px 12px 12px;
+    background: #00000047;
+  }
 
-    .card-overlay h5 {
+  .card-overlay h5 {
     font-size: 16px;
-  
-}
+  }
 
-
-.chevron-btn {
-        bottom: 8px;
-        right: 12px;
-    }
+  .chevron-btn {
+    bottom: 8px;
+    right: 12px;
+  }
 
   .card-overlay p {
     font-size: 14px;
@@ -634,8 +615,6 @@
     margin-top: 0px;
   }
 
-
-
   .tab-text-col {
     padding: 15px;
   }
@@ -709,13 +688,6 @@
     white-space: nowrap;
   }
 
-  .mobile-slide .banner-col,
-  .mobile-slide .trust-col {
-    flex: 0 0 auto;
-    width: 76%;
-    margin-bottom: 5px;
-  }
-
   .instagram-slider {
     display: flex;
     overflow-x: auto;
@@ -732,6 +704,17 @@
   .mobile-slide {
     flex-wrap: nowrap;
     overflow-x: auto;
+    display: flex;
+  }
+
+  .mobile-slide .banner-col,
+  .mobile-slide .trust-col,
+  .mobile-slide .benefit-card-col,
+  .mobile-slide > * {
+    flex: 0 0 auto;
+    width: 76%;
+    margin-bottom: 10px;
+    margin-top: 15px;
   }
 
   .certs-grid {
@@ -950,18 +933,18 @@
    Tablet & Below (Up to 991px)
 =================================== */
 @media (max-width: 991px) {
+  .tab-arrow.is-hidden {
+    display: block;
+  }
 
-
-.box-tab .nav-item {
+  .box-tab .nav-item {
     flex: 0 0 200px;
   }
 
   .box-tab .nav-link {
-   min-height: 52px;
-        padding: 14px 10px;
+    min-height: 52px;
+    padding: 14px 10px;
   }
-
-
 
   .btn-row .btn-cart {
     font-size: 0;
